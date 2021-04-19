@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<Html>
+    <head>
+        <title>Google</title>
+    </head>
+
+    <style>
+        .top-anchors{
+            color: black;
+            text-decoration: none;
+            font-family: arial,sans-serif;
+            font-size: 13px;
+            padding-right: 24px;
+        }
+        .top-anchors:hover{
+            text-decoration: underline;
+        }
+        .dots{
+            height: 25px;
+            margin-top: 5px;
+        }
+        .navbar{
+            display: flex;
+            justify-content: right;
+
+        }
+        .nav-bar-list{
+            margin: 10px;
+            display: flex;
+            line-height: 24px;
+        }
+
+        .search{
+            display: flex;
+            padding-top: 100px ;
+            flex-flow: column;
+        }
+        .logo{
+            padding-left: 750px;
+        }
+        
+        .search-flex{
+            display: flex;
+            padding: 5px;        
+            width: 512px;
+            margin-top: 20px;
+            margin-left: 620px;
+            border-radius: 24px;
+            border: 1px solid #dfe1e5;
+            max-width: 550px;
+        }
+        #search-box{
+            margin-left: 10px;
+            height: 36px;
+            width:  460px;
+            border: white;
+        }
+        .search-icon{
+            height: 28px;
+            width:  28px;
+            opacity: 0.3;
+        }
+        #search-box:focus{
+            outline: none;
+        }
+
+        .search-buttons{
+            padding: 20px;
+            margin-left:720px;
+            display: flex;
+        }
+
+        .search-button{
+            margin: 10px;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border: 1px solid transparent;
+            color: #5f6368;
+        }
+
+        .language-section{
+            font-size: 13px;
+            font-family: arial,sans-serif;
+            display: flex;
+            margin-left: 620px;
+        }
+    .languages{
+            display: flex;
+    }
+    .language{
+            margin: 10px;
+            text-decoration: none;
+            font-size: 13px;
+            
+        }
+
+
+    .footer-list{
+            display: flex;
+            padding-bottom: 10px;
+    }
+    .footer-links{
+            margin-top: 5px;
+            margin-left: 10px;
+            text-decoration: none;
+            font-size: 15px;
+            font-family: arial,sans-serif;
+        }    
+
+
+    .footer{
+        display: flex;
+        flex-flow: column;
+        padding-top: 15px;
+        padding-left: 15px;
+        border-top: #dadce0;
+        background-color: #f2f2f2;;
+        color: rgba(0,0,0,.54);
+        margin-top: 380px;
+    }   
+
+    .right{
+        margin-left: 1200px;
+    } 
+    </style>
+
+    <body>
+        <div>
+            <div class="navbar">
+                <div class="nav-bar-list">
+
+                <a class="top-anchors" href="">Gmail</a>
+                <a class="top-anchors" href="">Images</a>
+                <a href=""><svg class="top-anchors dots" focusable="false" viewBox="0 4 24 24">
+                    <path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z">
+                    </path>
+                </svg>
+                <a class="top-anchors" style= "padding:3px 15px;text-decoration: none; background-color: #4285f4; color: white; border-radius: 3px; margin-bottom:10px;">
+                    Sign In</a>
+                </a>
+                
+            </div>
+            </div>
+        </div>    
+        
+        <div class="search">
+            <a href="www.google.com">
+                <img class="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+            </a>
+            <div class="search-flex">
+                <svg class="search-icon" focusable="false" viewBox="0 -10 30 30" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                </path>
+                </svg>
+                <input id="search-box" type="search">
+            </div>
+        </div>    
+        <div class="search-buttons">
+            <button class="search-button" type="submit">Google Search</button>
+            <button class="search-button" type="submit">I'm Feeling Lucky</button>
+        </div> 
+        
+        <div class="language-section">
+        <p>Google offered in:
+        <ul class=languages style="list-style-type:none;">
+            <li><a class="language" href="#">English</a></li>
+            <li><a class="language" href="#">हिंदी</a></li>
+            <li><a class="language" href="#">മലയാളം</a></li>
+            
+        </ul>
+        </p>
+        </div>    
+        </div>
+
+    </body>
+
+    <div class="footer">
+        <div class="footer-list" style="border-bottom: 1px solid #dadce0">
+        <a class="footer-links">India</a>
+        </div>        
+        <ul class="footer-list" style="list-style-type:none;">
+            <li class="footer-links">About</li>
+            <li class="footer-links">Advertising</li>
+            <li class="footer-links">Business</li>
+            <li class="footer-links">How Search Works</li>
+            <li class="right footer-links">Privacy</li>
+            <li class="footer-links">Terms</li>
+            <li class="footer-links">Settings</li>
+        </ul>
+    </div>
+
+
+</Html>

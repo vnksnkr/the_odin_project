@@ -1,0 +1,177 @@
+<html>
+  <head>
+    <title>Rock Paper Scissors!</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <style>
+    body {
+      background-color: orange;
+    }
+
+    h1 {
+      color: white;
+      font-family: "Zen Dots", cursive;
+      font-size: 50px;
+      margin-top: 50px;
+      margin-left: 550px;
+    }
+
+    .icons{
+        max-height: 100px;
+        max-width: 100px;
+    }
+
+    .weapons{
+        margin: 20px;
+        border: 5px solid white;
+    }
+
+    .play-area{
+      display: flex;
+    }
+
+    .player-board{
+        height: 500px;
+        width: 200px;
+        margin-left: 200px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .computer-board{
+      color: white;
+      margin-top: 150px;
+      margin-left: 500px;
+      font-family: "Zen Dots", cursive;
+      font-size: 40px;
+    }
+
+    .score-board{
+      border: 10px solid white;
+      color: white;
+      height: 100px;
+      width: 100px;
+      padding-top: 10px;
+      padding-bottom: 30px;
+      padding-left: 55px;
+      padding-right: 20px;
+      margin-top: 150px;
+      margin-left: 400px;
+      font-size: 40px;
+    }
+
+    .result-board{
+      margin-left: 730px;
+      color: white;
+      font-family: "Zen Dots", cursive;
+      font-size: 40px;
+         }
+
+
+
+  </style>
+
+  <body>
+    <script>
+      var computer = 0;
+      var player = 0;
+      var weapons = ["Rock", "Paper", "Scissors"];
+      var computerSelection = 0;
+      var playerSelection = 0;
+      console.log("%d, debug",computer);
+
+      function reset()
+      {
+        computer = 0;
+        player = 0;
+        document.getElementById('result').innerHTML = "";
+        document.getElementById('computer-weapon').innerHTML ="";
+        document.getElementById('score').innerHTML = player + " : " + computer;
+      }
+
+      function computerPlay() {
+        return Math.floor(Math.random() * 3);
+      }
+
+      function play(playerSelection_p, computerSelection_p) {
+        var playerSelection_p,computerSelection_p;
+        switch (playerSelection_p - computerSelection_p) {
+          case 0:
+            return "draw";
+          case 1:
+            return "player";
+          case 2:
+            return "computer";
+          case -1:
+            return "computer";
+          case -2:
+            return "player";
+          default:
+            return "draw";
+        }
+      }
+
+      function game(selection) {
+        playerSelection = Number(selection);
+        computerSelection = computerPlay();
+        round = play(playerSelection, computerSelection);
+        document.getElementById('computer-weapon').innerHTML = weapons[computerSelection];
+        
+
+        if (round == "draw") {
+          computer = computer;
+          player = player;
+        } else if (round == "player") player = player + 1;
+        else computer = computer + 1;
+
+        console.log("player %s", weapons[playerSelection]);
+        console.log("computer %s", weapons[computerSelection]);
+        console.log("player %d : %d computer", player, computer);
+        document.getElementById('score').innerHTML = player + " : " + computer;
+
+        if (player == 5 || computer == 5) {
+          if (player == 5) {
+            document.getElementById('result').innerHTML = 'You Win!';
+            player = 0;
+            computer = 0;
+          } else {
+            document.getElementById('result').innerHTML = 'You Lose..';
+            player = 0;
+            computer = 0;
+          }
+        }
+
+
+      }
+    </script>
+
+    <h1>Rock Paper Scissors!</h1>
+    <div class="play-area">
+    <div class="player-board">
+      <h2 style="margin-left: 40px; font-size: 30px; font-family:Zen Dots, cursive; color: white;">Player</h2> 
+      <button class = "weapons" id="0" onclick="game(this.id);"><img class = "icons" src="Angelo_Gemmi_stone.svg" /></button>
+      <button class = "weapons" id="1" onclick="game(this.id);"><img class = "icons" src="paper.svg" /></button>
+      <button class = "weapons" id="2" onclick="game(this.id);"><img class = "icons" src="scissors.svg" /></button>
+    </div>
+    <div class="score-board">
+      <p id="score">0:0</p>
+    </div>
+    <div class="computer-board">
+      <h2 style="margin-left: 5px; font-size: 40px; font-family:Zen Dots, cursive; color: white;">Computer</h2> 
+      <p id='computer-weapon'></p>
+    </div>
+    </div>
+    <div class='result-board'>
+      <p id = 'result' style="margin-left: 55px;"></p>
+      <button class="reset" onclick="reset()" style="background-color: orange; border: 10px solid white; padding: 50px; color: white; font-family: Zen Dots, cursive; margin-left:65px; margin-top: 50px;">
+        Play Again!</button>
+    </div>
+
+
+</body>
+</html>

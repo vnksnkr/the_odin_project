@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>Functons</title>
+</head>
+<body>
+
+</body>
+<script>
+    function add7(number){
+        return number + 7;
+    }
+    function multiply(a,b){
+        return a*b;
+    }
+    function capitalize(word){
+        return word[0].toUpperCase() + word.slice(1,word.length);
+    }
+    function lastletter(word){
+        return word[word.length-1];
+    }
+    
+    
+    var number = Number(prompt("Enter number"));
+    alert(add7(number));
+    var a = Number(prompt("Enter number 1"));
+    var b = Number(prompt("Enter number 2"));
+    alert(multiply(a,b));
+    var word1 = prompt("Enter String");
+    alert(capitalize(word1));
+    var word2 = prompt("Enter String");
+    alert(lastletter(word2));
+
+</script>
+
+</html>

@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Etch-A-Sketch!</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap"
+          rel="stylesheet"
+        />
+    </head>
+
+<style>
+    h1 {
+      color: black;
+      font-family: "Zen Dots", cursive;
+      font-size: 50px;
+      margin-top: 50px;
+      margin-left: 600px;
+    }
+
+    body {
+      background-color: orange;
+    }
+
+    .option{
+      background-color: orange; 
+      border: 10px solid black; 
+      padding: 30px;  
+      color: #181818;
+      font-family: Zen Dots;
+      margin-left: 40px;
+    }
+
+    #options{
+        margin-left: 550px;
+        margin-top: 30px;
+    }
+
+</style>
+
+
+
+    <body>
+        <h1>Etch-A-Sketch!</h1>
+        <div id = 'gridcontainer' style="height: 546px;width: 546px; margin-left: 576px; margin-top: 100;">
+            
+        </div>
+
+        <div id = 'options'>
+            <button class = 'option' id='reset' onclick='reset()'>Reset</button>
+            <button class = 'option' id='classic' onclick='setclassic()'>Classic</button>
+            <button class = 'option' id='modern' onclick='setmodern()'>Modern</button>
+        </div>
+        <div class="slidecontainer">
+            <input type="range" min="2" max="100" value="1" class="slider" id="myRange">
+          </div>
+        <script src="etchasketch.js"></script>
+    </body>
+</html>
